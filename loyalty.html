@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprouts Mart-loyalty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <!-- navigation batr and header -->
+    <header>
+        <nav class="navbar">
+            <section class="navbar-section">
+                <h1 class="navbar-title">SPROUTS <span class="mart">mart</span></h1>
+                <ul class="navbar-list">
+                    <li><a href="home.html" class="navbar-link">Home</a></li>
+                    <li><a href="about us.html" class="navbar-link">About Us</a></li>
+                    <li><a href="dairy products.html" class="navbar-link">Dairy Products</a></li>
+                    <li><a href="vegetables.html" class="navbar-link">Vegetables</a></li>
+                    <li><a href="cosmetics.html" class="navbar-link">Cosmetics</a></li>
+                    <li><a href="order.html" class="navbar-link">Order</a></li>
+                    <li><a href="loyalty.html" class="navbar-link">Loyalty Registration</a></li>
+                </ul>
+            </section>
+        </nav>
+    </header>
+
+  <!-- loyalty registration form -->
+    <div class="registration-container">
+        <h2>Loyalty Program Registration</h2>
+        <form id="loyaltyForm">
+            <!-- Full name input -->
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" placeholder="Enter your name" id="fullname" name="fullname" required>
+            </div>
+            <!-- Email input -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Enter your email address" id="email" name="email" required>
+            </div>
+            <!-- Date of Birth input -->
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <!-- Loyalty scheme selection -->
+            <div class="form-group">
+                <label for="loyalty">Select Loyalty Scheme:</label>
+                <select id="loyalty" name="loyalty" required>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                    <option value="platinum">Platinum</option>
+                </select>
+            </div>
+          
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+      
+         <!-- layalty scheme -->
+            <div id="goldBenefits" style="display: none;">
+                <h4>Gold Scheme Benefits</h4>
+                <ul >
+                    <li class="message">15% discount on selected items</li>
+                    <li class="message">Priority customer support</li>
+                    <li class="message">Free delivery on all orders</li>
+                </ul>
+                <img src="gold_card.jpg" alt="Gold Loyalty Card" class="loyalty-card">
+            </div>
+            <div id="platinumBenefits" style="display: none;">
+                <h4>Platinum Scheme Benefits</h4>
+                <ul class="pasege">
+                    <li class="message">20% discount on all items</li>
+                    <li class="message">Personal shopper service</li>
+                    <li class="message">Complimentary gifts on special occasions</li>
+                </ul>
+                <img src="platinum_card.jpg" alt="Platinum Loyalty Card" class="loyalty-card">
+            </div>
+        </div>
+    </div>
+
+      <!-- footer -->
+    <footer>
+        <p>&copy; 2024 Sprouts Mart. All rights reserved. | Created by Jerome</p>
+    </footer>
+
+</body>
+</html>

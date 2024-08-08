@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Sprouts Mart</title>
+        <link rel="stylesheet" type="text/css" href="style.css">   
+    </head>
+    
+    <body>
+        <header>
+            <nav class="navbar">
+                <section class="navbar-section">
+                    <h1 class="navbar-title">SPROUTS <span class="mart">mart</span></h1>
+                    <ul class="navbar-list">
+                        <li><a href="index.html" class="navbar-link">Home</a></li>
+                        <li><a href="about us.html" class="navbar-link">About Us</a></li>
+                        <li><a href="dairy products.html" class="navbar-link">Dairy Products</a></li>
+                        <li><a href="vegetables.html" class="navbar-link">Vegetables</a></li>
+                        <li><a href="cosmetics.html" class="navbar-link">Cosmetics</a></li>
+                        <li><a href="order.html" class="navbar-link">Order</a></li>
+                        <li><a href="loyalty.html" class="navbar-link">Loyalty Registration</a></li>
+                    </ul>
+                </section>
+            </nav>
+        </header>
+        
+        <main>
+            <section>
+                <div class="container">
+                    <div class="order-list">
+                        <div class="order-item">
+                            <h2>Fruits</h2>
+                            <label for="fruits-name">Product Name:</label>
+                            <select id="fruits-name">
+                                <option value="Watermelon">Watermelon</option>
+                                <option value="Mango">Mango</option>
+                                <option value="Papaya">Papaya</option>
+                                <option value="Pineapple">Pineapple</option>
+                                <option value="Apple">Apple</option>
+                                <option value="Grape">Grape</option>
+                            </select>
+                            <label for="fruits-kg">Kgs:</label>
+                            <input type="number" id="fruits-kg" min="0">
+                            <br>
+                            <br>
+                            Price: $<span id="fruits-price">0.00</span>
+                            <br>
+                            <br>
+                            <button>Add to Cart</button>
+                        </div>
+                        <div class="order-item">
+                            <h2>Vegetables</h2>
+                            <label for="vegetables-name">Product Name:</label>
+                            <select id="vegetables-name">
+                                <option value="Pumpkin">Pumpkin</option>
+                                <option value="Cucumber">Cucumber</option>
+                                <option value="Chili">Chili</option>
+                                <option value="Potato">Potato</option>
+                                <option value="Beetroot">Beetroot</option>
+                                <option value="Spinach">Spinach</option>
+                            </select>
+                            <label for="vegetables-kg">Kgs:</label>
+                            <input type="number" id="vegetables-kg" min="0">
+                            <br>
+                            <br>
+                            Price: $<span id="vegetables-price">0.00</span>
+                            <br>
+                            <br>
+                            <button>Add to Cart</button>
+                        </div>
+                        <div class="order-item">
+                            <h2>Dairy Produce</h2>
+                            <label for="dairy-name">Product Name:</label>
+                            <select id="dairy-name">
+                                <option value="Cheese">Cheese</option>
+                                <option value="Curd">Curd</option>
+                                <option value="Yoghurt">Yoghurt</option>
+                                <option value="Mozzarella">Mozzarella</option>
+                                <option value="Strawberry Milk">Strawberry Milk</option>
+                                <option value="Full Cream Milk">Full Cream Milk</option>
+                            </select>
+                            <label for="dairy-quantity">Quantity:</label>
+                            <input type="number" id="dairy-quantity" min="0">
+                            <br>
+                            <br>
+                            Price: $<span id="dairy-price">0.00</span>
+                            <br>
+                            <br>
+                            <button>Add to Cart</button>
+                        </div>
+                        <div class="order-item">
+                            <h2>Meat and Seafood</h2>
+                            <label for="meat-name">Product Name:</label>
+                            <select id="meat-name">
+                                <option value="Broiler Chicken">Broiler Chicken</option>
+                                <option value="Salaya">Salaya</option>
+                                <option value="Crab">Crab</option>
+                                <option value="Pork">Pork</option>
+                                <option value="Beef">Beef</option>
+                                <option value="Linna">Linna</option>
+                            </select>
+                            <label for="meat-kg">Kgs:</label>
+                            <input type="number" id="meat-kg" min="0">
+                            <br>
+                            <br>
+                            Price: $<span id="meat-price">0.00</span>
+                            <br>
+                            <br>
+                            <button>Add to Cart</button>
+                        </div>
+                        <div class="order-item">
+                            <h2>Baking and Cooking Ingredients</h2>
+                            <label for="baking-name">Product Name:</label>
+                            <select id="baking-name">
+                                <option value="Yeast">Yeast</option>
+                                <option value="Margarine">Margarine</option>
+                                <option value="Whole Purpose Flour">Whole Purpose Flour</option>
+                                <option value="Pasta">Pasta</option>
+                                <option value="Oil">Oil</option>
+                                <option value="Masala">Masala</option>
+                            </select>
+                            <label for="baking-quantity">Quantity:</label>
+                            <input type="number" id="baking-quantity" min="0">
+                            <br>
+                            <br>
+                            Price: $<span id="baking-price">0.00</span>
+                            <br>
+                            <br>
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <section class="cart-section">
+            <h2>Shopping Cart</h2>
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Items will be added here dynamically -->
+                </tbody>
+                
+            </table>
+            <button id="save-favorites" onclick="saveFavorites()">Add to Favorites</button>
+            <button id="apply-favorites" onclick="applyFavorites()">Apply Favorites</button>
+            <a href="checkout.html"><button id="buy-now-button">Buy Now</button></a>
+
+        </section>
+    
+        <script src="script.js"></script>
+    </body>
+
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>&copy; 2024 Sprouts Mart. All rights reserved. | Created by Jerome</p>
+    </footer>
+</html>
